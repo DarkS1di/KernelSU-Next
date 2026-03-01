@@ -881,7 +881,7 @@ int ksu_handle_sys_reboot(int magic1, int magic2, unsigned int cmd,
             susfs_set_hide_sus_mnts_for_non_su_procs(arg);
             return 0;
         }
-#endif //#ifdef CONFIG_KSU_SUSFS_SUS_MOUNT
+#endif // #ifdef CONFIG_KSU_SUSFS_SUS_MOUNT
 #ifdef CONFIG_KSU_SUSFS_SUS_KSTAT
         if (cmd == CMD_SUSFS_ADD_SUS_KSTAT) {
             susfs_add_sus_kstat(arg);
@@ -895,37 +895,31 @@ int ksu_handle_sys_reboot(int magic1, int magic2, unsigned int cmd,
             susfs_add_sus_kstat(arg);
             return 0;
         }
-#endif //#ifdef CONFIG_KSU_SUSFS_SUS_KSTAT
-#ifdef CONFIG_KSU_SUSFS_TRY_UMOUNT
-        if (cmd == CMD_SUSFS_ADD_TRY_UMOUNT) {
-            susfs_add_try_umount(arg);
-            return 0;
-        }
-#endif //#ifdef CONFIG_KSU_SUSFS_TRY_UMOUNT
+#endif // #ifdef CONFIG_KSU_SUSFS_SUS_KSTAT
 #ifdef CONFIG_KSU_SUSFS_SPOOF_UNAME
         if (cmd == CMD_SUSFS_SET_UNAME) {
             susfs_set_uname(arg);
             return 0;
         }
-#endif //#ifdef CONFIG_KSU_SUSFS_SPOOF_UNAME
+#endif // #ifdef CONFIG_KSU_SUSFS_SPOOF_UNAME
 #ifdef CONFIG_KSU_SUSFS_ENABLE_LOG
         if (cmd == CMD_SUSFS_ENABLE_LOG) {
             susfs_enable_log(arg);
             return 0;
         }
-#endif //#ifdef CONFIG_KSU_SUSFS_ENABLE_LOG
+#endif // #ifdef CONFIG_KSU_SUSFS_ENABLE_LOG
 #ifdef CONFIG_KSU_SUSFS_SPOOF_CMDLINE_OR_BOOTCONFIG
         if (cmd == CMD_SUSFS_SET_CMDLINE_OR_BOOTCONFIG) {
             susfs_set_cmdline_or_bootconfig(arg);
             return 0;
         }
-#endif //#ifdef CONFIG_KSU_SUSFS_SPOOF_CMDLINE_OR_BOOTCONFIG
+#endif // #ifdef CONFIG_KSU_SUSFS_SPOOF_CMDLINE_OR_BOOTCONFIG
 #ifdef CONFIG_KSU_SUSFS_OPEN_REDIRECT
         if (cmd == CMD_SUSFS_ADD_OPEN_REDIRECT) {
             susfs_add_open_redirect(arg);
             return 0;
         }
-#endif //#ifdef CONFIG_KSU_SUSFS_OPEN_REDIRECT
+#endif // #ifdef CONFIG_KSU_SUSFS_OPEN_REDIRECT
 #ifdef CONFIG_KSU_SUSFS_SUS_MAP
         if (cmd == CMD_SUSFS_ADD_SUS_MAP) {
             susfs_add_sus_map(arg);
